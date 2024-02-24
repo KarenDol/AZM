@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <title>Регистрация учеников</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="student_pic.png">
+        <form id="mainForm" novalidate>
+            <h2>Новая Заявка</h2>
+            <div class="form-control">
+                <label for="organization">Заказчик</label>
+                <input type="text" id="organization" placeholder="Название Компании"
+                       name="organization" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="phone">Контакты Заказчика</label>
+                <input type="tel" id="phone" placeholder="+7(000)000-00-00"
+                       name="organization" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email Заказчика</label>
+                <input type="email" id="email" placeholder="zakazchik@azm.kz"
+                       name="email" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="subject">Предмет Закупа</label>
+                <input type="text" id="subject" placeholder=""
+                       name="subject" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="comment">Message</label>
+                <textarea id="comment" rows="4" placeholder="Комментарий к заявке"
+                          name="comment"></textarea>
+                <i class="icon"></i>
+            </div>
+
+            <button type="submit">Отправить</button>
+
+        </form>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Success!</h2>
+            <p>Ваша форма была успешно отправлена.</p>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script2.js' %}"></script>
+    <script src="https://unpkg.com/imask"></script>
+</body>
+</html>
